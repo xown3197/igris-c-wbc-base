@@ -1,0 +1,58 @@
+{
+  "schema_version": "wbc_base_training_evidence/v1",
+  "run": {
+    "lineage": "fresh_scratch_nominal_500_seed42",
+    "relation_to_nominal_32": "separate fresh run; checkpoint numbers are not continuous",
+    "task": "WBC-Base-Flat-IGRISC-Nominal-v0",
+    "num_envs": 64,
+    "num_steps_per_env": 24,
+    "updates": 500,
+    "transitions": 768000,
+    "seed": 42,
+    "training_time_s": 1149.29,
+    "exit_code": 0
+  },
+  "runtime": {
+    "host_gpu": "A100 physical GPU 7",
+    "image": "sonic-isaaclab:2.3.2",
+    "image_id": "sha256:4355f34c58fc3a71b1859c0a809753578498a454791cff0619f897d276a7ba18",
+    "isaac_sim": "5.1.0-rc.19",
+    "isaaclab_commit": "f4aa17f87e2e5db5484f0b5974918573e8918ce2",
+    "rsl_rl_commit": "c281c32e5746e75570c1a29bfa78bca0200cc5ff"
+  },
+  "selected_training_scalars": {
+    "steps": [0, 31, 100, 200, 300, 400, 499],
+    "mean_episode_length": [3.0, 69.23999786376953, 59.97999954223633, 73.0199966430664, 85.19000244140625, 107.66000366210938, 142.11000061035156],
+    "mean_reward": [-0.4107683300971985, -2.023876190185547, -1.4962106943130493, -0.6529090404510498, 0.288743257522583, 2.6446373462677, 4.1927266120910645],
+    "termination_base_height_low": [0.0, 0.8274739980697632, 0.8723958730697632, 0.96875, 0.9778646230697632, 0.9986979365348816, 0.96875],
+    "termination_orientation": [0.0, 0.2044270932674408, 0.1243489608168602, 0.015625, 0.0, 0.0, 0.015625],
+    "termination_time_out": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  },
+  "final_checkpoint": {
+    "path": "nominal_500_gpu7/logs/rsl_rl/wbc_base/2026-09-13_10-41-48/model_499.pt",
+    "sha256": "5a5f254b38787bc9c8f104fc73bce13eec3694003614da01b4b91116aa3e13a3",
+    "iter": 499,
+    "tensor_leaves": 76,
+    "tensor_values": 1325557,
+    "nonfinite_tensor_paths": [],
+    "optimizer_state_entries": 17
+  },
+  "interpretation": {
+    "confirmed": "the scratch pipeline trains and approximately doubles the rolling episode duration by update 499",
+    "failed_criterion": "no recorded timeout termination; update-499 rolling termination is dominated by base_height_low",
+    "classification": "training/runtime baseline passed; standing policy not established",
+    "not_measured": [
+      "deterministic checkpoint rollout",
+      "walking tracking quality",
+      "domain-randomized robustness",
+      "manufacturer MuJoCo deployment",
+      "physical robot behavior"
+    ]
+  },
+  "startup_investigation": {
+    "repeated_reset": "present in the user-authorized reset15_v2 MuJoCo evaluation wrapper, not found in manufacturer public Isaac training",
+    "training_decision": "do not select only already-upright reset states during training",
+    "deployment_decision": "retain readiness and authority gates but match Isaac first-observation history fill and public-default action offset",
+    "details": "../../deployment_contract.json"
+  }
+}

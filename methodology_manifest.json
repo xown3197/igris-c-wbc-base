@@ -1,0 +1,42 @@
+{
+  "schema_version": "igris_wbc_base_methodology/v1",
+  "lineage": "wbc_base_scratch",
+  "weights": "new",
+  "optimizer": "new",
+  "normalizer": "new",
+  "plant": {
+    "source": "robrosinc/robros_lab_public",
+    "commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+    "asset": "IGRIS_C_LOCOMOTION_CFG",
+    "root": "base_link",
+    "root_semantic": "torso",
+    "pelvis": "Link_Waist_Pitch"
+  },
+  "carried_now": [
+    "15-axis legs-plus-waist policy partition",
+    "0.25 residual joint-position action scale",
+    "58-value actor frame with 2-frame history",
+    "7D velocity-and-body-pose command interface",
+    "torso angular velocity and projected gravity semantics",
+    "manufacturer public actuator and domain-randomization configuration",
+    "tracking reward widths and joint-limit weight from the retained methodology"
+  ],
+  "explicitly_not_carried": [
+    "pelvis-root USD",
+    "existing policy weights",
+    "existing optimizer state",
+    "existing observation normalizer",
+    "dummy one-kilogram root",
+    "custom foot collision overlay",
+    "pelvis-to-torso observation reconstruction",
+    "fixed five-millisecond target delay"
+  ],
+  "deferred_changes": [
+    "five-condition discrete command schedule",
+    "start-heading retention and cross-velocity diagnostics",
+    "WalkV5 measured-q target relaxation and PJS/GLOBAL HARD projection",
+    "upper-body pose curriculum",
+    "wrist load and FALCON-inspired curriculum"
+  ],
+  "evidence_state": "CPU contract and Isaac GPU scratch-training runtime verified; 500-update nominal run did not establish standing, robustness, manufacturer-MuJoCo deployment, or physical behavior"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "igris_wbc_base_upstream/v1",
+  "repository": "https://github.com/robrosinc/robros_lab_public.git",
+  "commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+  "files": {
+    "scripts/rsl_rl/base/play.py": "624d7fb1037134b0b7d74107bbdc8879dbce04f9935c20f42d0515201d0857f9",
+    "scripts/rsl_rl/base/train.py": "0a8bcd20f71d195f6e9dc4aebebf7e36e2b078512c390c2d42f9db85de8f866e",
+    "source/robros_lab_public/robros_lab_public/assets/robots/robros.py": "084aeff233960e886a62f3b0867b330070db129ccb04181e9548712acb56c0b2",
+    "source/robros_lab_public/robros_lab_public/assets/robots/robros/igris_c/from_urdf/usd/extras/locomotion/igris_c.usd": "ef96bb9d078d311233c08e08d2334fd0d154ac89627111bf77bbb9c969966eea",
+    "source/robros_lab_public/robros_lab_public/tasks/locomotion/velocity/velocity_env_cfg.py": "c5c580b5ed2fa4b69d3197bb135e965378060c9ae46653b4561c587405581af0",
+    "source/robros_lab_public/robros_lab_public/tasks/locomotion/velocity/config/igris_c/base/rough_env_cfg.py": "5e53c92095a6c27e7682b82fa84a6e61c1e1332fcab97b466b05085c93a28b1b",
+    "source/robros_lab_public/robros_lab_public/tasks/locomotion/velocity/config/igris_c/base/flat_env_cfg.py": "0e32191968702fd1010027fb394b7928265fc9414f495f0940d2e71d0a35aeac",
+    "source/robros_lab_public/robros_lab_public/tasks/locomotion/velocity/config/igris_c/agents/rsl_rl_ppo_cfg.py": "01041534635a7e8fe3c1af39c80eff421700de6a734250c42c3ff86d3de3ca2f"
+  }
+}

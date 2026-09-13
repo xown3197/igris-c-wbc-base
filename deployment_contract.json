@@ -1,0 +1,38 @@
+{
+  "schema_version": "igris_wbc_base_deployment/v1",
+  "scope": "manufacturer_mujoco_startup_adapter",
+  "policy_contract": {
+    "policy_period_s": 0.02,
+    "history_length": 2,
+    "history_at_activation": "repeat_first_fresh_observation_into_all_slots",
+    "previous_raw_action_at_activation": "zero",
+    "action_target": "manufacturer_public_default_pose + 0.25 * policy_action",
+    "forbidden_action_offset": "measured_armed_q0"
+  },
+  "readiness_gate": {
+    "classification": "evaluation_and_deployment_precondition_not_training_reset",
+    "maximum_reset_attempts": 15,
+    "observation_s_per_attempt": 8.0,
+    "continuous_upright_s": 2.0,
+    "minimum_height_m": 0.84,
+    "maximum_tilt_deg": 10.0,
+    "maximum_sample_gap_s": 0.04,
+    "maximum_policy_joint_speed_rad_s": 0.5,
+    "maximum_root_speed_m_s": 0.3,
+    "maximum_root_angular_speed_rad_s": 0.2,
+    "maximum_q_from_public_default_rad": 0.2,
+    "require_clear_joint_status": true
+  },
+  "authority_handoff": {
+    "required_standby": "mode_3_state_8",
+    "requested_direct_control": "mode_1_state_3",
+    "seed_while_waiting": "hold_measured_q0_at_50_hz",
+    "history_initialization_time": "after_authoritative_mode_1_state_3",
+    "upper_body_transition": "two_second_blend"
+  },
+  "provenance": {
+    "repeated_reset": "user_authorized_reset15_v2_evaluation_wrapper",
+    "not_observed_in": "manufacturer_public_isaac_training_environment",
+    "isaac_history_behavior": "IsaacLab_f4aa17_first_append_fills_all_history_slots"
+  }
+}

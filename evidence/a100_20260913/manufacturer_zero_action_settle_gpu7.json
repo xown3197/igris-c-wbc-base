@@ -1,0 +1,46 @@
+{
+  "action_dim": 24,
+  "actor_observation_shape": [
+    1,
+    810
+  ],
+  "completed_without_done": false,
+  "duration_s": 10.0,
+  "final_pelvis_pos_w": [
+    -0.1029982939362526,
+    -0.262725830078125,
+    0.845247745513916
+  ],
+  "final_root_ang_vel_b": [
+    0.3626502454280853,
+    -0.8692169785499573,
+    -0.25893041491508484
+  ],
+  "final_root_pos_w": [
+    -0.172195166349411,
+    -0.2319108545780182,
+    0.8786875009536743
+  ],
+  "final_root_quat_w": [
+    0.9345981478691101,
+    0.008493688888847828,
+    -0.25752854347229004,
+    -0.24522043764591217
+  ],
+  "final_torso_pos_w": [
+    -0.172195166349411,
+    -0.2319108545780182,
+    0.8786875009536743
+  ],
+  "first_done_step": 79,
+  "first_done_terms": {
+    "orientation": 1.0
+  },
+  "initial_root_height_m": 0.9800000190734863,
+  "max_abs_root_ang_vel_rad_s": 3.1795787811279297,
+  "minimum_root_height_m": 0.5074335336685181,
+  "policy_dt_s": 0.02,
+  "schema_version": "wbc_base_zero_action_settle/v1",
+  "steps_requested": 500,
+  "task": "Isaac-Velocity-Phase-Flat-IGRISC_Play"
+}

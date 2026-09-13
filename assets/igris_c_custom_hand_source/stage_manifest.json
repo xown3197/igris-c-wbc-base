@@ -1,0 +1,14 @@
+{
+  "source": "/home/tjkim/workspaces/Project2026.Humanoid/igris/isolated_workdirs/igris-g1-sonic-pairs-20260827/validation_inputs/urdf_corrected_usd",
+  "files": {
+    ".asset_hash": "fbb03b504489de366f7cd2f7d64785c6d2fece733b59bc5be89c27e57da8e598",
+    "config.yaml": "665c077ec42af2b48f01a9e6d128a6aca85629a5f368aaa883c42bfac5f6bf0b",
+    "configuration/igris_c_corrected.unlocked_base.usd": "36f07c6fc165b267edd16589f40b5e0677f4454070141bdbb2955dbe0a560613",
+    "configuration/igris_c_corrected.unlocked_physics.usd": "f1b0979c8fd67e8e409748b28c115640aa79f30023716f010688aa18104426d3",
+    "configuration/igris_c_corrected.unlocked_robot.usd": "c5adc9c3517dc3cf760804ee9da46b27445c46169b8e15a3e64ea77221481b30",
+    "configuration/igris_c_corrected.unlocked_sensor.usd": "8ece26b0686b11d942034e424b39573d87ac43231f0655988214c920e752aeb9",
+    "igris_c_corrected.locked.usd": "1bb8e243a968ceb5793427352c8efd4b1259ad1d5a5f568a9e2a057936d5b5f4",
+    "igris_c_corrected.unlocked.usd": "54fd1c7ee681889a5f1c52a91bf157415e7f9fee16be6356d79331772146631a",
+    "lock_report.json": "06532f90d449e54c10daf4111d0335912617acdf509e96217b678bcce6ad0d00"
+  }
+}

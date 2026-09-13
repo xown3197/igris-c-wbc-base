@@ -1,0 +1,37 @@
+{
+  "schema_version": "wbc_base_training_launch/v1",
+  "lineage": "resume_custom_hand_no_camera_nominal_seed42_model499_to_model1999",
+  "status_at_launch_check": "running",
+  "container": "wbc_customhand_nominal_resume2000_g7_20260913",
+  "output_root": "/home/tjkim2/WBC/wbc_base_20260913/runtime/WBC_base/evidence/a100_20260913/custom_hand_corrected_nominal500_gpu7",
+  "run_directory": "/home/tjkim2/WBC/wbc_base_20260913/runtime/WBC_base/evidence/a100_20260913/custom_hand_corrected_nominal500_gpu7/logs/rsl_rl/wbc_base/2026-09-13_13-32-31_resume499_to1999",
+  "task": "WBC-Base-Flat-IGRISC-CustomHand-Nominal-v0",
+  "training": {
+    "physical_gpu": 7,
+    "num_envs": 64,
+    "num_steps_per_env": 24,
+    "additional_iterations": 1501,
+    "expected_final_checkpoint_label": "model_1999.pt",
+    "seed": 42,
+    "resume": true,
+    "load_run": "2026-09-13_12-47-08",
+    "checkpoint": "model_499.pt",
+    "run_name_suffix": "resume499_to1999"
+  },
+  "inputs": {
+    "checkpoint_sha256": "399dffcd15557414dd689ccd26130152936a9102063ebfd7848e1a4c9b6f8369",
+    "manufacturer_commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+    "isaaclab_commit": "f4aa17f87e2e5db5484f0b5974918573e8918ce2",
+    "rsl_rl_commit": "c281c32e5746e75570c1a29bfa78bca0200cc5ff",
+    "env_cfg_sha256": "ad2223825e959f6404fb2694a936f9154558a730434ebfc6f8f74e77c8fa7663",
+    "tasks_sha256": "b79b817b6127f4872ac6e64ebc539014b1d92403cc073804fd4507da97bac05c",
+    "usd_wrapper_sha256": "7f9e8aaecc05acbdddca628393d148dfeb12790f08396df35360a37f9e346278"
+  },
+  "rsl_resume_semantic": "RSL-RL starts the new loop at loaded iter 499 and adds 1501 iterations, producing final label model_1999.pt. The new run has a separate TensorBoard event file and directory.",
+  "monitoring": {
+    "checkpoint_interval": 100,
+    "automatic_stop_or_reconfiguration": false,
+    "post_run_comparison_labels": [499, 999, 1499, 1999]
+  },
+  "interpretation_limit": "A longer nominal run tests same-lineage learning progression only. It does not establish domain-randomized robustness, walking quality, MuJoCo transfer, or physical-robot safety."
+}

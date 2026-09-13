@@ -1,0 +1,59 @@
+{
+  "group": "all",
+  "locked_joint_count": 10,
+  "locked_joints": {
+    "l_hand_dof_joint_cmc": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/l_hand_dof_joint_cmc",
+      "upper_deg": 0.0
+    },
+    "l_hand_dof_joint_dip": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/l_hand_dof_joint_dip",
+      "upper_deg": 0.0
+    },
+    "l_hand_dof_joint_mcp": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/l_hand_dof_joint_mcp",
+      "upper_deg": 0.0
+    },
+    "l_hand_dof_joint_mcp_thumb": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/l_hand_dof_joint_mcp_thumb",
+      "upper_deg": 0.0
+    },
+    "neck_pitch": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/neck_pitch",
+      "upper_deg": 0.0
+    },
+    "neck_yaw": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/neck_yaw",
+      "upper_deg": 0.0
+    },
+    "r_hand_dof_joint_cmc": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/r_hand_dof_joint_cmc",
+      "upper_deg": 0.0
+    },
+    "r_hand_dof_joint_dip": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/r_hand_dof_joint_dip",
+      "upper_deg": 0.0
+    },
+    "r_hand_dof_joint_mcp": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/r_hand_dof_joint_mcp",
+      "upper_deg": 0.0
+    },
+    "r_hand_dof_joint_mcp_thumb": {
+      "lower_deg": 0.0,
+      "prim_path": "/igris_c_rcv_hand_pelvis/joints/r_hand_dof_joint_mcp_thumb",
+      "upper_deg": 0.0
+    }
+  },
+  "method": "revolute_equal_zero_limits",
+  "schema_version": 1,
+  "usd": "/home/tjkim/workspaces/Project2026.Humanoid/igris/isolated_workdirs/igris-g1-sonic-pairs-20260827/validation_inputs/urdf_corrected_usd/igris_c_corrected.locked.usd"
+}

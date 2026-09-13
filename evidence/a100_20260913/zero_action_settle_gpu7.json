@@ -1,0 +1,43 @@
+{
+  "action_dim": 15,
+  "actor_observation_shape": [
+    1,
+    116
+  ],
+  "completed_without_done": false,
+  "duration_s": 10.0,
+  "final_pelvis_pos_w": [
+    0.017118051648139954,
+    0.0024680402129888535,
+    0.8894708752632141
+  ],
+  "final_root_ang_vel_b": [
+    -0.008434448391199112,
+    -0.37448468804359436,
+    0.0015714552719146013
+  ],
+  "final_root_pos_w": [
+    -0.04820752143859863,
+    0.002696441486477852,
+    0.9403481483459473
+  ],
+  "final_root_quat_w": [
+    0.9915104508399963,
+    -0.0019384232582524419,
+    -0.13001224398612976,
+    -7.204454595921561e-05
+  ],
+  "final_torso_pos_w": [
+    -0.04820752143859863,
+    0.002696441486477852,
+    0.9403481483459473
+  ],
+  "first_done_step": 78,
+  "initial_root_height_m": 0.9800000190734863,
+  "max_abs_root_ang_vel_rad_s": 1.3979648351669312,
+  "minimum_root_height_m": 0.5095151662826538,
+  "policy_dt_s": 0.02,
+  "schema_version": "wbc_base_zero_action_settle/v1",
+  "steps_requested": 500,
+  "task": "WBC-Base-Flat-IGRISC-Play-v0"
+}

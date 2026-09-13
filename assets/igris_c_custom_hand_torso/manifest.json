@@ -1,0 +1,41 @@
+{
+  "schema_version": "igris_c_custom_hand_torso/v1",
+  "manufacturer_urdf_sha256": "617ec1229d43f11361937b4eff90cded9c4c26fa3f5b46ca8d310895f27881c4",
+  "custom_urdf_sha256": "20ea37be83ed30bf02583a1720fe7ac2f616aae048d2e72088b365770a97696f",
+  "output_urdf_sha256": "5111a0f16ada8f900b210b74889a696b2eb9c080b0aec889159597263e00a840",
+  "link_count": 144,
+  "joint_count": 143,
+  "movable_joint_count": 23,
+  "movable_joints": [
+    "Joint_Waist_Yaw",
+    "Joint_Waist_Roll",
+    "Joint_Waist_Pitch",
+    "Joint_Hip_Pitch_Left",
+    "Joint_Hip_Roll_Left",
+    "Joint_Hip_Yaw_Left",
+    "Joint_Knee_Pitch_Left",
+    "Joint_Ankle_Pitch_Left",
+    "Joint_Ankle_Roll_Left",
+    "Joint_Hip_Pitch_Right",
+    "Joint_Hip_Roll_Right",
+    "Joint_Hip_Yaw_Right",
+    "Joint_Knee_Pitch_Right",
+    "Joint_Ankle_Pitch_Right",
+    "Joint_Ankle_Roll_Right",
+    "Joint_Shoulder_Pitch_Left",
+    "Joint_Shoulder_Roll_Left",
+    "Joint_Shoulder_Yaw_Left",
+    "Joint_Elbow_Pitch_Left",
+    "Joint_Shoulder_Pitch_Right",
+    "Joint_Shoulder_Roll_Right",
+    "Joint_Shoulder_Yaw_Right",
+    "Joint_Elbow_Pitch_Right"
+  ],
+  "custom_hand_links_per_side": 55,
+  "physics_surrogate": {
+    "mass_and_collision": "manufacturer Left_Hand and Right_Hand links retained",
+    "visuals": "custom hand subtree",
+    "custom_subtree_joints": "fixed",
+    "training_readiness": "visual alignment only; exact custom mass and collision not validated"
+  }
+}

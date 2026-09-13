@@ -1,0 +1,74 @@
+{
+  "schema_version": "wbc_base_a100_smoke/v1",
+  "date": "2026-09-13",
+  "runtime": {
+    "host": "A100",
+    "physical_gpu": 7,
+    "container_image": "sonic-isaaclab:2.3.2",
+    "container_image_id": "sha256:4355f34c58fc3a71b1859c0a809753578498a454791cff0619f897d276a7ba18",
+    "isaac_sim": "5.1.0-rc.19+release.26219.9c81211b.gl",
+    "isaaclab_commit": "f4aa17f87e2e5db5484f0b5974918573e8918ce2",
+    "rsl_rl_commit": "c281c32e5746e75570c1a29bfa78bca0200cc5ff",
+    "rsl_rl_version": "5.4.2",
+    "manufacturer_commit": "b72d87190ee6893cf6f3db8dc417d1750518040a"
+  },
+  "compatibility_fix": {
+    "scope": "import alias only",
+    "legacy_import": "isaaclab.envs.mdp.actions.ActionTermCfg",
+    "definition": "isaaclab.managers.ActionTermCfg",
+    "changes_plant_or_mdp": false
+  },
+  "zero_action_ab": {
+    "duration_s": 10.0,
+    "wbc_base": {
+      "action_dim": 15,
+      "actor_observation_dim": 116,
+      "first_done_step": 78
+    },
+    "manufacturer_phase": {
+      "action_dim": 24,
+      "actor_observation_dim": 810,
+      "first_done_step": 79,
+      "first_done_term": "orientation"
+    },
+    "interpretation": "matched open-loop instability; no evidence of a WBC_base spawn-placement regression"
+  },
+  "nominal_smoke": {
+    "status": "completed",
+    "exit_code": 0,
+    "seed": 42,
+    "num_envs": 64,
+    "steps_per_env_per_update": 24,
+    "updates": 32,
+    "transitions": 49152,
+    "training_time_s": 76.41,
+    "actor_observation_dim": 116,
+    "critic_observation_dim": 99,
+    "action_dim": 15,
+    "final_iteration": 31,
+    "final_mean_reward": -2.023876190185547,
+    "final_mean_episode_length_steps": 69.23999786376953,
+    "final_logged_termination_values": {
+      "base_contact": 0.0,
+      "base_height_low": 0.8274739980697632,
+      "orientation": 0.2044270932674408,
+      "thigh_contact_acceleration": 0.015625,
+      "time_out": 0.0
+    },
+    "checkpoint": {
+      "file": "logs/rsl_rl/wbc_base/2026-09-13_10-18-33/model_31.pt",
+      "sha256": "0905a53dbfc854b0b9dc8d20f8fa723e24d8904f7d109e36174985df72f63d37",
+      "tensor_leaves": 76,
+      "tensor_values": 1325557,
+      "nonfinite_tensors": 0,
+      "optimizer_state_entries": 17
+    }
+  },
+  "decision": {
+    "runtime_contract_passed": true,
+    "walking_quality_established": false,
+    "sim_to_real_established": false,
+    "long_training_started": false,
+    "next_question": "Can a bounded scratch run improve survival before reintroducing robust domain randomization?"
+  }
+}

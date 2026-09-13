@@ -1,0 +1,37 @@
+{
+  "asset": "/workspace/run/WBC_base/assets/igris_c_custom_hand_torso/usd/igris_c_custom_hand_torso.usd",
+  "output": "/workspace/run/WBC_base/evidence/a100_20260913/igris_c_custom_hand_torso_corrected.png",
+  "image_size": [
+    1280,
+    960
+  ],
+  "revolute_joint_count": 23,
+  "revolute_joints": [
+    "/World/Robot/joints/Joint_Shoulder_Pitch_Left",
+    "/World/Robot/joints/Joint_Shoulder_Roll_Left",
+    "/World/Robot/joints/Joint_Shoulder_Yaw_Left",
+    "/World/Robot/joints/Joint_Elbow_Pitch_Left",
+    "/World/Robot/joints/Joint_Shoulder_Pitch_Right",
+    "/World/Robot/joints/Joint_Shoulder_Roll_Right",
+    "/World/Robot/joints/Joint_Shoulder_Yaw_Right",
+    "/World/Robot/joints/Joint_Elbow_Pitch_Right",
+    "/World/Robot/joints/Joint_Waist_Yaw",
+    "/World/Robot/joints/Joint_Waist_Roll",
+    "/World/Robot/joints/Joint_Waist_Pitch",
+    "/World/Robot/joints/Joint_Hip_Pitch_Left",
+    "/World/Robot/joints/Joint_Hip_Roll_Left",
+    "/World/Robot/joints/Joint_Hip_Yaw_Left",
+    "/World/Robot/joints/Joint_Knee_Pitch_Left",
+    "/World/Robot/joints/Joint_Ankle_Pitch_Left",
+    "/World/Robot/joints/Joint_Ankle_Roll_Left",
+    "/World/Robot/joints/Joint_Hip_Pitch_Right",
+    "/World/Robot/joints/Joint_Hip_Roll_Right",
+    "/World/Robot/joints/Joint_Hip_Yaw_Right",
+    "/World/Robot/joints/Joint_Knee_Pitch_Right",
+    "/World/Robot/joints/Joint_Ankle_Pitch_Right",
+    "/World/Robot/joints/Joint_Ankle_Roll_Right"
+  ],
+  "hand_visual_prim_count": 112,
+  "has_left_custom_hand": true,
+  "has_right_custom_hand": true
+}

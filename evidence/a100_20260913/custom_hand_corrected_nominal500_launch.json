@@ -1,0 +1,39 @@
+{
+  "schema_version": "wbc_base_training_launch/v1",
+  "lineage": "fresh_scratch_custom_hand_corrected_nominal500_seed42",
+  "relation_to_other_runs": "separate fresh run; no checkpoint, optimizer, or normalizer was resumed",
+  "status_at_launch_check": "running",
+  "container": "wbc_customhand_nominal500_g7_20260913",
+  "run_name": "2026-09-13_12-47-08",
+  "output_root": "/home/tjkim2/WBC/wbc_base_20260913/runtime/WBC_base/evidence/a100_20260913/custom_hand_corrected_nominal500_gpu7",
+  "task": "WBC-Base-Flat-IGRISC-CustomHand-Nominal-v0",
+  "training": {
+    "physical_gpu": 7,
+    "num_envs": 64,
+    "num_steps_per_env": 24,
+    "max_iterations": 500,
+    "seed": 42,
+    "initial_checkpoint": "model_0.pt"
+  },
+  "inputs": {
+    "manufacturer_commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+    "isaaclab_commit": "f4aa17f87e2e5db5484f0b5974918573e8918ce2",
+    "rsl_rl_commit": "c281c32e5746e75570c1a29bfa78bca0200cc5ff",
+    "rsl_rl_version": "5.4.2",
+    "hybrid_urdf_sha256": "5111a0f16ada8f900b210b74889a696b2eb9c080b0aec889159597263e00a840",
+    "usd_wrapper_sha256": "7f9e8aaecc05acbdddca628393d148dfeb12790f08396df35360a37f9e346278",
+    "usd_base_layer_sha256": "cfc3f6f53b173253f279fec810ab03cab1d7cbf2df7f646b796f6e7a7617b51e",
+    "env_cfg_sha256": "ad2223825e959f6404fb2694a936f9154558a730434ebfc6f8f74e77c8fa7663",
+    "tasks_sha256": "b79b817b6127f4872ac6e64ebc539014b1d92403cc073804fd4507da97bac05c"
+  },
+  "preflight": {
+    "zero_action_first_done_step": 77,
+    "zero_action_first_done_term": "base_height_low",
+    "smoke_updates": 32,
+    "smoke_transitions": 49152,
+    "smoke_exit_code": 0,
+    "smoke_final_checkpoint_sha256": "a431f125a011b169a3514dce4226b8282e0e3b8984577bee23e45b42290974fc",
+    "smoke_nonfinite_tensors": 0
+  },
+  "interpretation_limit": "This launch uses nominal randomization-light training and the manufacturer hand mass/collision surrogate. It does not establish robust walking, exact custom-hand physics, MuJoCo transfer, or physical-robot safety."
+}

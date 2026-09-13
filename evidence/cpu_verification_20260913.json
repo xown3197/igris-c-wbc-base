@@ -1,0 +1,41 @@
+{
+  "schema_version": "igris_wbc_base_cpu_verification/v1",
+  "date": "2026-09-13",
+  "status": "CPU_CONTRACT_PASS",
+  "checks": [
+    {
+      "command": "PYTHONPATH=src pytest -q",
+      "exit_code": 0,
+      "result": "7 passed in 0.01s"
+    },
+    {
+      "command": "python3 -m compileall -q src scripts tests",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/verify_upstream.py /tmp/robros_lab_public_audit",
+      "exit_code": 0,
+      "commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+      "verified_file_count": 6,
+      "asset_sha256": "ef96bb9d078d311233c08e08d2334fd0d154ac89627111bf77bbb9c969966eea"
+    }
+  ],
+  "runtime_inventory": {
+    "default_python_isaaclab": false,
+    "default_python_isaaclab_rl": false,
+    "default_python_robros_lab_public": false,
+    "default_python_gymnasium": false,
+    "existing_isaacsim_checkout": "/home/tjkim/workspaces/Project2026.Humanoid/igris/igris_c_isaacsim_public",
+    "existing_isaacsim_checkout_commit": "0448665efc793f937a6debd51f0bd9acf892b64d",
+    "existing_isaaclab_submodule_initialized": false,
+    "existing_isaacsim_submodule_initialized": false
+  },
+  "not_executed": [
+    "Isaac configuration import",
+    "Isaac no-policy settle",
+    "GPU PPO smoke",
+    "policy training",
+    "manufacturer MuJoCo evaluation",
+    "physical robot execution"
+  ]
+}

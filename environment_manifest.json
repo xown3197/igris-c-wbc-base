@@ -1,0 +1,65 @@
+{
+  "schema_version": "igris_wbc_base_environment/v1",
+  "environment_boundary": "Isaac Lab Gym task",
+  "portable_bundle_root": ".",
+  "known_paths": {
+    "local_bundle": "/home/tjkim/Documents/ChatGPT/IGRIS-C/WBC_base",
+    "a100_bundle": "/home/tjkim2/WBC/wbc_base_20260913/runtime/WBC_base",
+    "a100_manufacturer_upstream": "/home/tjkim2/WBC/wbc_base_20260913/runtime/robros_lab_public",
+    "a100_isaaclab": "/home/tjkim2/WBC/wbc_base_20260913/runtime/IsaacLab_exact",
+    "a100_rsl_rl_overlay": "/home/tjkim2/WBC/wbc_base_20260913/runtime/rsl_overlay"
+  },
+  "dependencies": {
+    "manufacturer_repository": "https://github.com/robrosinc/robros_lab_public.git",
+    "manufacturer_commit": "b72d87190ee6893cf6f3db8dc417d1750518040a",
+    "isaaclab_commit": "f4aa17f87e2e5db5484f0b5974918573e8918ce2",
+    "verified_rsl_rl_commit": "c281c32e5746e75570c1a29bfa78bca0200cc5ff",
+    "verified_rsl_rl_version": "5.4.2",
+    "rsl_rl_required_for_environment": false
+  },
+  "tasks": {
+    "training": "WBC-Base-Flat-IGRISC-CustomHand-v0",
+    "nominal_smoke": "WBC-Base-Flat-IGRISC-CustomHand-Nominal-v0",
+    "placement": "WBC-Base-Flat-IGRISC-CustomHand-Play-v0"
+  },
+  "entry_points": {
+    "training": "wbc_base.env_cfg:WBCBaseCustomHandFlatEnvCfg",
+    "nominal_smoke": "wbc_base.env_cfg:WBCBaseCustomHandFlatEnvCfg_NOMINAL",
+    "placement": "wbc_base.env_cfg:WBCBaseCustomHandFlatEnvCfg_PLAY"
+  },
+  "policy_contract": {
+    "action_dim": 15,
+    "actor_frame_dim": 58,
+    "history_length": 2,
+    "actor_observation_dim": 116,
+    "command_dim": 7,
+    "quaternion_order": "wxyz",
+    "articulation_root": "base_link",
+    "root_semantic": "torso",
+    "pelvis_body": "Link_Waist_Pitch",
+    "physics_dt_s": 0.005,
+    "policy_dt_s": 0.02,
+    "action_scale": 0.25,
+    "action_offset_source": "manufacturer_public_default_pose",
+    "history_reset_semantic": "repeat_first_observation"
+  },
+  "assets": {
+    "custom_hand_usd": "assets/igris_c_custom_hand_torso/usd/igris_c_custom_hand_torso.usd",
+    "custom_hand_usd_sha256": "7f9e8aaecc05acbdddca628393d148dfeb12790f08396df35360a37f9e346278",
+    "custom_hand_usd_base_layer": "assets/igris_c_custom_hand_torso/usd/configuration/igris_c_custom_hand_torso_base.usd",
+    "custom_hand_usd_base_layer_sha256": "cfc3f6f53b173253f279fec810ab03cab1d7cbf2df7f646b796f6e7a7617b51e",
+    "hybrid_urdf": "assets/igris_c_custom_hand_torso/urdf/igris_c_custom_hand_torso.urdf",
+    "hybrid_urdf_sha256": "5111a0f16ada8f900b210b74889a696b2eb9c080b0aec889159597263e00a840",
+    "movable_joint_count": 23,
+    "custom_hand_links_per_side": 55
+  },
+  "source_contract": {
+    "env_cfg": "src/wbc_base/env_cfg.py",
+    "env_cfg_sha256": "ad2223825e959f6404fb2694a936f9154558a730434ebfc6f8f74e77c8fa7663",
+    "task_registry": "src/wbc_base/tasks.py",
+    "task_registry_sha256": "b79b817b6127f4872ac6e64ebc539014b1d92403cc073804fd4507da97bac05c",
+    "policy_contract": "src/wbc_base/contract.py"
+  },
+  "physics_limit": "Custom hands are fixed visual CAD. Manufacturer Left_Hand and Right_Hand mass and collision surrogates are retained; exact hand dynamics and contact are not validated."
+}
+
